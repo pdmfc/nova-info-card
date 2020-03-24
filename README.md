@@ -42,4 +42,4 @@ public function cards()
 ->danger($message)
 ```
 
-![Example](https://github.com/pdmfc/nova-info-card/images/example.png)
+![Example](images/example.png)
