@@ -24,21 +24,15 @@ public function cards()
 
 ```
 
-## Available methods
+### Choosing theme
 
 ```php
 ->info($message)
-```
 
-```php
 ->success($message)
-```
 
-```php
 ->warning($message)
-```
 
-```php
 ->danger($message)
 ```
 
@@ -48,6 +42,23 @@ public function cards()
 ```
 
 ![Example](images/example.png)
+
+---
+
+### Defining a header
+
+```php
+public function cards()
+{
+    return [
+        (new InfoCard())
+            ->info('Some info message')
+            ->heading('Quick info')
+    ];
+}
+```
+
+![Heading screenshot](images/heading_example.png)
 
 ---
 

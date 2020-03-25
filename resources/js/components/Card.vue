@@ -1,20 +1,22 @@
 <template>
-  <card
-    class="border-t-4 card flex items-center p-3 shadow-md"
-    :class="containerClasses"
-  >
-    <component :is="icon" :class="iconClasses"></component>
-    <p :class="messageClasses">{{ card.message }}</p>
+  <card class="border-t-4 card flex items-center p-3 shadow-md" :class="containerClasses">
+    <div :class="{'self-start':card.withHeading}">
+      <component :is="icon" :class="iconClasses"></component>
+    </div>
+    <div>
+      <h2 v-if="card.withHeading" :class="headingClasses">{{ card.heading}}</h2>
+      <p :class="messageClasses">{{ card.message }}</p>
+    </div>
   </card>
 </template>
 
 <script>
-import InfoIcon from './icons/InfoIcon';
-import SuccessIcon from './icons/SuccessIcon';
-import WarningIcon from './icons/WarningIcon';
+import InfoIcon from "./icons/InfoIcon";
+import SuccessIcon from "./icons/SuccessIcon";
+import WarningIcon from "./icons/WarningIcon";
 export default {
   props: [
-    'card'
+    "card"
 
     // The following props are only available on resource detail cards...
     // 'resource',
@@ -32,20 +34,20 @@ export default {
     return {
       themes: {
         info: {
-          color: 'blue',
-          icon: 'info'
+          color: "blue",
+          icon: "info"
         },
         success: {
-          color: 'green',
-          icon: 'success'
+          color: "green",
+          icon: "success"
         },
         warning: {
-          color: 'yellow',
-          icon: 'warning'
+          color: "yellow",
+          icon: "warning"
         },
         danger: {
-          color: 'red',
-          icon: 'warning'
+          color: "red",
+          icon: "warning"
         }
       }
     };
@@ -53,7 +55,7 @@ export default {
 
   computed: {
     icon() {
-      return this.theme.icon + '-icon';
+      return this.theme.icon + "-icon";
     },
 
     theme() {
@@ -74,6 +76,10 @@ export default {
 
     messageClasses() {
       return `text-${this.color}-800`;
+    },
+
+    headingClasses() {
+      return `text-lg font-bold text-${this.color}-800 leading-none mb-1`;
     }
   }
 };
