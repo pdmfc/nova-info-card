@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import InfoIcon from "./icons/InfoIcon";
-import SuccessIcon from "./icons/SuccessIcon";
-import WarningIcon from "./icons/WarningIcon";
+import InfoIcon from './icons/InfoIcon';
+import SuccessIcon from './icons/SuccessIcon';
+import WarningIcon from './icons/WarningIcon';
 export default {
   props: [
-    "card"
+    'card'
 
     // The following props are only available on resource detail cards...
     // 'resource',
@@ -32,20 +32,20 @@ export default {
     return {
       themes: {
         info: {
-          color: "blue",
-          icon: "info"
+          color: 'blue',
+          icon: 'info'
         },
         success: {
-          color: "green",
-          icon: "success"
+          color: 'green',
+          icon: 'success'
         },
         warning: {
-          color: "yellow",
-          icon: "warning"
+          color: 'yellow',
+          icon: 'warning'
         },
         danger: {
-          color: "red",
-          icon: "warning"
+          color: 'red',
+          icon: 'warning'
         }
       }
     };
@@ -53,7 +53,7 @@ export default {
 
   computed: {
     icon() {
-      return this.theme.icon + "-icon";
+      return this.theme.icon + '-icon';
     },
 
     theme() {
