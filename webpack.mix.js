@@ -10,4 +10,10 @@ mix
     processCssUrls: false,
     postCss: [tailwindcss("./tailwind.config.js")]
   })
-  .purgeCss();
+  .purgeCss({
+    whitelistPatterns: [
+      /^bg-(red|green|blue|yellow)-200/,
+      /^text-(red|green|blue|yellow)-(600|800)/,
+      /^border-(red|green|blue|yellow)-600/
+    ]
+  });
