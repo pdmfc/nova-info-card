@@ -48,3 +48,32 @@ public function cards()
 ```
 
 ![Example](images/example.png)
+
+---
+
+## How to contribute
+
+- clone the repo
+- on `composer.json` of a laravel nova application add the following:
+
+```
+{
+    //...
+
+    "require" {
+        "pdmfc/nova-info-card: "*"
+    },
+
+    //...
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../path_to_your_package_folder"
+        }
+    ],
+}
+```
+
+- run `composer update pdmfc/nova-info-card`
+
+You're now ready to start contributing!
