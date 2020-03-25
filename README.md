@@ -56,7 +56,7 @@ public function cards()
 - clone the repo
 - on `composer.json` of a laravel nova application add the following:
 
-```json
+```
 {
     //...
 
