@@ -14,6 +14,11 @@ class InfoCard extends Card
     public $width = 'full';
 
     /**
+     * @var bool
+     */
+    protected $withHeading = false;
+
+    /**
      * The message to be displayed.
      *
      * @param string $message
@@ -67,6 +72,31 @@ class InfoCard extends Card
     public function danger(string $message): self
     {
         return $this->message($message, 'danger');
+    }
+
+    /**
+     * Displays a heading with the given message.
+     *
+     * @param string $message
+     * @return $this
+     */
+    public function heading(string $heading): self
+    {
+        $this->withHeading = true;
+
+        return $this->withMeta(compact('heading'));
+    }
+
+    /**
+     * Prepare the element for JSON serialization.
+     *
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return array_merge([
+            'withHeading' => $this->withHeading,
+        ], parent::jsonSerialize());
     }
 
     /**
