@@ -1,4 +1,6 @@
-# A simple Nova info card
+# Nova Info Card
+
+This package provides an easy-and-simple way to add notification cards to a Laravel Nova Resource.
 
 ## Installation
 
