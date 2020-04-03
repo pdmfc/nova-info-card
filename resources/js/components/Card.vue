@@ -15,6 +15,8 @@
 import InfoIcon from "./icons/InfoIcon";
 import SuccessIcon from "./icons/SuccessIcon";
 import WarningIcon from "./icons/WarningIcon";
+import DangerIcon from "./icons/DangerIcon";
+
 export default {
   props: [
     "card"
@@ -28,27 +30,24 @@ export default {
   components: {
     InfoIcon,
     SuccessIcon,
-    WarningIcon
+    WarningIcon,
+    DangerIcon
   },
 
   data() {
     return {
       themes: {
         info: {
-          color: "blue",
-          icon: "info"
+          color: "blue"
         },
         success: {
-          color: "green",
-          icon: "success"
+          color: "green"
         },
         warning: {
-          color: "yellow",
-          icon: "warning"
+          color: "yellow"
         },
         danger: {
-          color: "red",
-          icon: "warning"
+          color: "red"
         }
       }
     };
@@ -56,7 +55,7 @@ export default {
 
   computed: {
     icon() {
-      return this.theme.icon + "-icon";
+      return this.card.theme + "-icon";
     },
 
     theme() {

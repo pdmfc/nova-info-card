@@ -11,7 +11,6 @@ composer require pdmfc/nova-info-card
 ## Usage
 
 ```php
-
 use Pdmfc\InfoCard\InfoCard;
 
 //...
@@ -23,10 +22,13 @@ public function cards()
             ->info('Some info message')
     ];
 }
-
 ```
 
-### Choosing theme
+### Themes
+
+This package comes with 4 predefined styles - _info_, _success_, _warning_ and _danger_. To select a theme, just use the it as the method name.
+
+If you need to generate a card theme dynamically, you can use the `message()` method which accepts two arguments - `$message` and `$level`.
 
 ```php
 ->info($message)
@@ -36,19 +38,21 @@ public function cards()
 ->message($message, $level) // accepted values for $level: 'info', 'success' , 'warning', 'danger'
 ```
 
-![Example](images/example.png)
+![Example](images/basic_example.png)
 
 ---
 
 ### Defining a header
 
+You can also define a heading for the message using the `heading()` method:
+
 ```php
 (new InfoCard())
+    ->heading('Info heading')
     ->info('Some info message')
-    ->heading('Quick info')
 ```
 
-![Heading screenshot](images/heading_example.png)
+![Heading screenshot](images/with_heading_example.png)
 
 ---
 
