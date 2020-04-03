@@ -1,9 +1,10 @@
 {
   "name": "pdmfc/nova-info-card",
-  "description": "A Laravel Nova notification info card.",
+  "description": "A Laravel Nova info card.",
   "keywords": [
     "laravel",
-    "nova"
+    "nova",
+    "package"
   ],
   "license": "MIT",
   "homepage": "https://github.com/pdmfc/nova-info-card",
@@ -20,13 +21,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Pdmfc\\InfoCard\\": "src/"
+      "Pdmfc\\NovaCards\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Pdmfc\\InfoCard\\CardServiceProvider"
+        "Pdmfc\\NovaCards\\InfoCardServiceProvider"
       ]
     }
   },

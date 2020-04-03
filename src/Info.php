@@ -1,10 +1,10 @@
 <?php
 
-namespace Pdmfc\InfoCard;
+namespace Pdmfc\NovaCards;
 
 use Laravel\Nova\Card;
 
-class InfoCard extends Card
+class Info extends Card
 {
     /**
      * The width of the card (1/3, 1/2, or full).

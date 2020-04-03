@@ -11,14 +11,14 @@ composer require pdmfc/nova-info-card
 ## Usage
 
 ```php
-use Pdmfc\InfoCard\InfoCard;
+use Pdmfc\NovaCards\Info;
 
 //...
 
 public function cards()
 {
     return [
-        (new InfoCard())
+        (new Info())
             ->info('Some info message')
     ];
 }
@@ -47,7 +47,7 @@ If you need to generate a card theme dynamically, you can use the `message()` me
 You can also define a heading for the message using the `heading()` method:
 
 ```php
-(new InfoCard())
+(new Info())
     ->heading('Info heading')
     ->info('Some info message')
 ```
@@ -61,7 +61,7 @@ You can also define a heading for the message using the `heading()` method:
 If you want to render your message as raw html the same wat that Nova lets you in resource fields, just chain the `asHtml()` method:
 
 ```php
-(new InfoCard())
+(new Info())
     ->info('Be sure to like this package and give us your feedback in
     <a href="https://github.com/pdmfc/nova-info-card/" class="underline font-bold text-blue-800">our repository</a>!')
     ->asHtml(),

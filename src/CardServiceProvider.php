@@ -1,13 +1,13 @@
 <?php
 
-namespace Pdmfc\InfoCard;
+namespace Pdmfc\NovaCards;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
-class CardServiceProvider extends ServiceProvider
+class InfoCardServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -21,8 +21,8 @@ class CardServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('info-card', __DIR__.'/../dist/js/card.js');
-            Nova::style('info-card', __DIR__.'/../dist/css/card.css');
+            Nova::script('info-card', __DIR__ . '/../dist/js/card.js');
+            Nova::style('info-card', __DIR__ . '/../dist/css/card.css');
         });
     }
 
@@ -39,7 +39,7 @@ class CardServiceProvider extends ServiceProvider
 
         Route::middleware(['nova'])
                 ->prefix('nova-vendor/info-card')
-                ->group(__DIR__.'/../routes/api.php');
+                ->group(__DIR__ . '/../routes/api.php');
     }
 
     /**
