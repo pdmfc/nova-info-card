@@ -87,6 +87,11 @@ class InfoCard extends Card
         return $this->withMeta(compact('heading'));
     }
 
+    public function asHtml()
+    {
+        return $this->withMeta(['asHtml' => true]);
+    }
+
     /**
      * Prepare the element for JSON serialization.
      *

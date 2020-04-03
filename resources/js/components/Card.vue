@@ -5,7 +5,8 @@
     </div>
     <div>
       <h2 v-if="card.withHeading" :class="headingClasses">{{ card.heading}}</h2>
-      <p :class="messageClasses">{{ card.message }}</p>
+      <p :class="messageClasses" v-if="card.asHtml" v-html="card.message"></p>
+      <p :class="messageClasses" v-else v-text="card.message"></p>
     </div>
   </card>
 </template>
