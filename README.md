@@ -30,17 +30,10 @@ public function cards()
 
 ```php
 ->info($message)
-
 ->success($message)
-
 ->warning($message)
-
 ->danger($message)
-```
-
-```php
-->message($message, $level)
-// accepted values for $level => ['info', 'success' , 'warning', 'danger']
+->message($message, $level) // accepted values for $level: 'info', 'success' , 'warning', 'danger'
 ```
 
 ![Example](images/example.png)
@@ -50,17 +43,27 @@ public function cards()
 ### Defining a header
 
 ```php
-public function cards()
-{
-    return [
-        (new InfoCard())
-            ->info('Some info message')
-            ->heading('Quick info')
-    ];
-}
+(new InfoCard())
+    ->info('Some info message')
+    ->heading('Quick info')
 ```
 
 ![Heading screenshot](images/heading_example.png)
+
+---
+
+### Render Html
+
+If you want to render your message as raw html the same wat that Nova lets you in resource fields, just chain the `asHtml()` method:
+
+```php
+(new InfoCard())
+    ->info('Be sure to like this package and give us your feedback in
+    <a href="https://github.com/pdmfc/nova-info-card/" class="underline font-bold text-blue-800">our repository</a>!')
+    ->asHtml(),
+```
+
+![Rendering raw Html](images/raw_html_example.png)
 
 ---
 
