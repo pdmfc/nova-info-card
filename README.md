@@ -12,7 +12,7 @@ composer require pdmfc/nova-info-card
 
 ```php
 
-use Pdmfc\InfoCard;
+use Pdmfc\InfoCard\InfoCard;
 
 //...
 
