@@ -61,7 +61,7 @@ You can also define a heading for the message using the `heading()` method:
 
 ### Render Html
 
-If you want to render your message as raw html the same wat that Nova lets you in resource fields, just chain the `asHtml()` method:
+If you want to render your message as raw html the same way that Nova lets you in resource fields, just chain the `asHtml()` method:
 
 ```php
 (new Info())
