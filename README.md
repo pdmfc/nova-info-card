@@ -1,7 +1,8 @@
 # Nova Info Card
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/pdmfc/nova-info-card.svg?style=flat-square)](https://packagist.org/packages/pdmfc/nova-info-card)
-![Licencse](https://img.shields.io/github/license/pdmfc/nova-info-card)
+![Licencse](https://img.shields.io/github/license/pdmfc/nova-info-card.svg?style=flat-square)
+[![Total Downloads](https://poser.pugx.org/pdmfc/nova-info-card/downloads?format=flat-square)](https://packagist.org/packages/pdmfc/nova-info-card)
 
 This package provides an easy-and-simple way to add notification cards to a Laravel Nova Resource.
 
